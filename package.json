@@ -1,6 +1,6 @@
 {
   "name": "popp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "command line tool to pluck the first line out of file",
   "main": "./lib/popp.js",
   "bin": {
