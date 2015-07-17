@@ -1,0 +1,30 @@
+{
+  "name": "next",
+  "version": "1.0.0",
+  "description": "command line tool to pluck the first line out of file",
+  "main": "./lib/next.js",
+  "bin": {
+    "next": "./bin/next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sintaxi/next.git"
+  },
+  "keywords": [
+    "cli",
+    "fs",
+    "pop",
+    "shift",
+    "rotate",
+    "file"
+  ],
+  "author": "Brock Whitten <brock@sintaxi.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sintaxi/next/issues"
+  },
+  "homepage": "https://github.com/sintaxi/next",
+  "dependencies": {
+    "minimist": "^1.1.1"
+  }
+}
