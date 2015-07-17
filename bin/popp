@@ -7,7 +7,7 @@ var argv = minimist(process.argv.slice(2), {
   "boolean" : [ "r" ]
 })
 
-var next     = require("../")
-var msg      = next(argv["_"][0], { "rotate": argv["rotate"] })
+var popp     = require("../")
+var msg      = popp(argv["_"][0], { "rotate": argv["rotate"] })
 
 console.log(msg)

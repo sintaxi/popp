@@ -1,14 +1,14 @@
 {
-  "name": "next",
+  "name": "popp",
   "version": "1.0.0",
   "description": "command line tool to pluck the first line out of file",
-  "main": "./lib/next.js",
+  "main": "./lib/popp.js",
   "bin": {
-    "next": "./bin/next"
+    "popp": "./bin/popp"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sintaxi/next.git"
+    "url": "https://github.com/sintaxi/popp.git"
   },
   "keywords": [
     "cli",
@@ -21,9 +21,9 @@
   "author": "Brock Whitten <brock@sintaxi.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sintaxi/next/issues"
+    "url": "https://github.com/sintaxi/popp/issues"
   },
-  "homepage": "https://github.com/sintaxi/next",
+  "homepage": "https://github.com/sintaxi/popp",
   "dependencies": {
     "minimist": "^1.1.1"
   }
