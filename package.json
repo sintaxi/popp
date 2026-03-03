@@ -1,10 +1,13 @@
 {
   "name": "popp",
-  "version": "1.0.1",
-  "description": "command line tool to pluck the first line out of file",
+  "version": "2.0.0",
+  "description": "command line tool to pluck the first line out of a file",
   "main": "./lib/popp.js",
   "bin": {
     "popp": "./bin/popp"
+  },
+  "scripts": {
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
@@ -20,11 +23,11 @@
   ],
   "author": "Brock Whitten <brock@sintaxi.com>",
   "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
   "bugs": {
     "url": "https://github.com/sintaxi/popp/issues"
   },
-  "homepage": "https://github.com/sintaxi/popp",
-  "dependencies": {
-    "minimist": "^1.1.1"
-  }
+  "homepage": "https://github.com/sintaxi/popp"
 }
