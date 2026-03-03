@@ -1,13 +1,49 @@
 #!/usr/bin/env node
 
-var minimist = require("minimist")
+"use strict"
 
-var argv = minimist(process.argv.slice(2), {
-  "alias"   : { "r": "rotate", "e": "on-error" },
-  "boolean" : [ "r" ]
-})
+const { parseArgs } = require("node:util")
 
-var popp     = require("../")
-var msg      = popp(argv["_"][0], { "rotate": argv["rotate"] })
+const usage = `
+  popp - pluck the first line out of a file
 
-console.log(msg)
+  Usage:
+    popp <file>             Pop first line from file
+    popp <file> --rotate    Pop first line and append it to end
+    popp --help             Show this help message
+
+  Options:
+    -r, --rotate    Move popped line to end of file
+    -h, --help      Show help
+`
+
+let args
+try {
+  args = parseArgs({
+    args: process.argv.slice(2),
+    options: {
+      rotate: { type: "boolean", short: "r", default: false },
+      help:   { type: "boolean", short: "h", default: false },
+    },
+    strict: false,
+    allowPositionals: true,
+  })
+} catch (err) {
+  console.error(err.message)
+  process.exit(1)
+}
+
+if (args.values.help || args.positionals.length === 0) {
+  console.log(usage)
+  process.exit(0)
+}
+
+const popp = require("../")
+
+try {
+  const msg = popp(args.positionals[0], { rotate: args.values.rotate })
+  console.log(msg)
+} catch (err) {
+  console.error("Error: " + err.message)
+  process.exit(1)
+}
